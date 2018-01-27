@@ -11,7 +11,8 @@
     role="button"
     tabindex="0"></amp-img>
   <nav toolbar="(min-width: 784px)"
-    toolbar-target="target-element-right">
+    toolbar-target="target-element-right"
+    layout="nodisplay">
     <ul>
       <li>
         <a href="/">Home</a>
@@ -47,12 +48,14 @@
     <li> Nav item 6</li>
   </ul>
 </amp-sidebar>
-
-
-<button on="tap:sidebar-right.toggle"
-  class="ampstart-btn caps m2">Toggle sidebar</button>
-
-
+<button class="menu-btn"
+  on="tap:sidebar-right.toggle"
+  class="ampstart-btn caps m2">
+  <amp-img src="/assets/ic_menu_purple_24dp_1x.png"
+    width="40"
+    height="40"
+    alt="menu"></amp-img>
+</button>
 <div id="target-element-right">
 </div>
 <div id="top-row">
