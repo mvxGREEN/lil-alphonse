@@ -8,29 +8,67 @@
     src: url("https://fonts.googleapis.com/css?family=Luckiest+Guy") format('truetype');
   }
 
-  .luckiest-guy {
+  .luckiest-guy-title {
     font-family: 'Luckiest Guy', serif, sans-serif;
+    color: #000000;
+    font-size: 60px;
+  }
+
+  .luckiest-guy-sub {
+    font-family: 'Luckiest Guy', serif, sans-serif;
+    color: #FFFFFF;
+    font-size: 30px;
   }
 
   /* Custom styles */
-
-  #top-row {
-    margin-bottom: 80px;
-    text-align: center;
-  }
-
-  .row {
-    margin:auto;
-    text-align: center;
-  }
 
   html {
     background-image: url("assets/underwater-background.jpg");
   }
 
+  #top-row {
+    text-align: center;
+  }
+
+  #marker {
+    position: absolute;
+    top: 100px;
+    width: 0px;
+    height: 0px;
+  }
+
   .container {
-    height: 1000px;
+    padding-bottom: 90px;
+    margin: auto;
+  }
+
+  .youtube-container {
+    height: 750px;
+    width: 50%;
+  }
+
+  .footer-bg {
+    background-color: #000000;
+    padding-bottom: 30px;
+    position: fixed;
+    text-align: left;
+    bottom: 0;
+    left: 0;
     width: 100%;
+  }
+
+  .footer-text {
+    color: #255818;
+    text-align: left;
+    font-family: Luckiest Guy;
+    font-size: 20px;
+    margin-left: 12px;
+    margin-top:12px;
+  }
+
+  button {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .scrollToTop {
@@ -49,63 +87,6 @@
     position: fixed;
     opacity: 0;
     visibility: hidden;
-  }
-
-  #marker {
-    position: absolute;
-    top: 100px;
-    width: 0px;
-    height: 0px;
-  }
-
-  button {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  .twitter-icon {
-    margin-top: 23px;
-    text-align: right;
-  }
-
-  .nav-logo.nav-logo-footer {
-    text-align: left;
-    font-size: 16px;
-    font-family: fantasy;
-    color: #255818;
-  }
-
-  .header-text {
-    text-align: center;
-  }
-
-  h1 {
-    color: #581845;
-    font-size: 40px;
-  }
-
-  h2 {
-    color: #255818;
-    font-size: 35px;
-  }
-
-  .footer-bg {
-    background-color: #581845;
-    padding-bottom: 30px;
-    position: fixed;
-    text-align: left;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  .footer-text {
-    color: #255818;
-    text-align: left;
-    font-family: Luckiest Guy;
-    font-size: 20px;
-    margin-left: 12px;
-    margin-top:12px;
   }
 
 </style>
