@@ -1,0 +1,13 @@
+[Unit]
+Description=lil-alphonse systemd service
+
+[Service]
+EnvironmentFile=/home/ubuntu/apps/lil-alphonse/current/.env
+User=root
+Group=root
+WorkingDirectory=/home/ubuntu/apps/lil-alphonse/current
+ExecStart=/home/ubuntu/apps/lil-alphonse/current/lil-alphonse
+ExecStop=/bin/kill $MAINPID
+
+[Install]
+WantedBy=multi-user.target

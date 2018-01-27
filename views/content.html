@@ -1,0 +1,80 @@
+{{ define "content" }}
+<div class="container">
+  <div id="top-row">
+    <amp-img src="/assets/chuck-smith-logo.jpg"
+      width="300"
+      height="200"
+      alt="chuck smith logo"></amp-img>
+  </div>
+  <div class="row">
+    <div class="twelve columns">
+      <amp-soundcloud height="166"
+        layout="fixed-height"
+        data-trackid="383239982"
+        data-color="581845"></amp-soundcloud>
+        <amp-soundcloud height="166"
+          layout="fixed-height"
+          data-trackid="325446275"
+          data-color="581845"></amp-soundcloud>
+        <amp-soundcloud height="166"
+          layout="fixed-height"
+          data-trackid="309572847"
+          data-color="581845"></amp-soundcloud>
+        <amp-soundcloud height="166"
+          layout="fixed-height"
+          data-trackid="286524721"
+          data-color="581845"></amp-soundcloud>
+    </div>
+  </div>
+  <div class="scrollToTopButton">
+      <amp-animation id="showAnim"
+        layout="nodisplay">
+        <script type="application/json">
+          {
+            "duration": "200ms",
+            "fill": "both",
+            "iterations": "1",
+            "direction": "alternate",
+            "animations": [{
+              "selector": "#scrollToTopButton",
+              "keyframes": [{
+                "opacity": "1",
+                "visibility": "visible"
+              }]
+            }]
+          }
+        </script>
+      </amp-animation>
+      <amp-animation id="hideAnim"
+        layout="nodisplay">
+        <script type="application/json">
+          {
+            "duration": "200ms",
+            "fill": "both",
+            "iterations": "1",
+            "direction": "alternate",
+            "animations": [{
+              "selector": "#scrollToTopButton",
+              "keyframes": [{
+                "opacity": "0",
+                "visibility": "hidden"
+              }]
+            }]
+          }
+        </script>
+      </amp-animation>
+      <div id="marker">
+        <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
+          layout="nodisplay">
+        </amp-position-observer>
+      </div>
+      <button id="scrollToTopButton"
+        on="tap:top-row.scrollTo(duration=200)"
+        class="scrollToTop">⌃</button>
+    </div>
+  </div>
+</div>
+<div class="footer-bg">
+  <h1 class="footer-text">By MVX GREEN<h1>
+</div>
+{{end}}
