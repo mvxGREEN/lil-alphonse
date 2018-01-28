@@ -30,16 +30,15 @@
     height="50"
     alt="menu"></amp-img>
 </button>
-<div id="target-element-right">
-</div>
-<div id="top-row">
+<div id="target-element-right"></div>
+<div id="title-row">
   <p class="luckiest-guy-title">Lil'<br />Alphonse</p>
   <p class="luckiest-guy-sub">THE #1 Snorkeling Guide<br />
     in San Pedro, Ambergris Caye, Belize</p>
 </div>
 <div class="container">
   <div class="row">
-    <div class="youtube-column">
+    <div class="six columns">
       <amp-youtube width="400"
         height="300"
         layout="responsive"
@@ -47,7 +46,7 @@
         autoplay>
       </amp-youtube>
     </div>
-    <div class="text-column">
+    <div class="six columns">
       <p class="luckiest-guy-title2">Hol Chan</p>
       <p class="luckiest-guy-body">
         Hol Chan is located 4 miles southeast of San Pedro. It's like diving in your
@@ -59,7 +58,7 @@
     </div>
   </div>
   <div class="row">
-    <div class="youtube-column">
+    <div class="six columns">
       <amp-youtube width="400"
         height="300"
         layout="responsive"
@@ -67,7 +66,7 @@
         autoplay>
       </amp-youtube>
     </div>
-    <div class="text-column">
+    <div class="six columns">
       <p class="luckiest-guy-title2">Shark Ray Alley</p>
       <p class="luckiest-guy-body">
         Shark Ray Alley is a must and it’s only a few minutes by boat from San Pedro.
@@ -76,53 +75,54 @@
         opportunities.</p>
     </div>
   </div>
-  <div class="scrollToTopButton">
-      <amp-animation id="showAnim"
-        layout="nodisplay">
-        <script type="application/json">
-          {
-            "duration": "200ms",
-            "fill": "both",
-            "iterations": "1",
-            "direction": "alternate",
-            "animations": [{
-              "selector": "#scrollToTopButton",
-              "keyframes": [{
-                "opacity": "1",
-                "visibility": "visible"
-              }]
-            }]
-          }
-        </script>
-      </amp-animation>
-      <amp-animation id="hideAnim"
-        layout="nodisplay">
-        <script type="application/json">
-          {
-            "duration": "200ms",
-            "fill": "both",
-            "iterations": "1",
-            "direction": "alternate",
-            "animations": [{
-              "selector": "#scrollToTopButton",
-              "keyframes": [{
-                "opacity": "0",
-                "visibility": "hidden"
-              }]
-            }]
-          }
-        </script>
-      </amp-animation>
-      <div id="marker">
-        <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
+  <div class="row">
+    <div class="scrollToTopButton">
+        <amp-animation id="showAnim"
           layout="nodisplay">
-        </amp-position-observer>
+          <script type="application/json">
+            {
+              "duration": "200ms",
+              "fill": "both",
+              "iterations": "1",
+              "direction": "alternate",
+              "animations": [{
+                "selector": "#scrollToTopButton",
+                "keyframes": [{
+                  "opacity": "1",
+                  "visibility": "visible"
+                }]
+              }]
+            }
+          </script>
+        </amp-animation>
+        <amp-animation id="hideAnim"
+          layout="nodisplay">
+          <script type="application/json">
+            {
+              "duration": "200ms",
+              "fill": "both",
+              "iterations": "1",
+              "direction": "alternate",
+              "animations": [{
+                "selector": "#scrollToTopButton",
+                "keyframes": [{
+                  "opacity": "0",
+                  "visibility": "hidden"
+                }]
+              }]
+            }
+          </script>
+        </amp-animation>
+        <div id="marker">
+          <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
+            layout="nodisplay">
+          </amp-position-observer>
+        </div>
+        <button id="scrollToTopButton"
+          on="tap:menu-button.scrollTo(duration=200)"
+          class="scrollToTop">⌃</button>
       </div>
-      <button id="scrollToTopButton"
-        on="tap:menu-button.scrollTo(duration=200)"
-        class="scrollToTop">⌃</button>
-    </div>
+      <p class="mvxgreen-footer">MVX GREEN</p>
   </div>
 </div>
-<h1 class="mvxgreen-footer">MVX GREEN<h1>
 {{end}}
