@@ -20,21 +20,19 @@
     <li> Nav item 3</li>
     <li> Nav item 4</li>
     <li> Nav item 5</li>
-  </ul>
-</amp-sidebar>
+  </ul></amp-sidebar>
 <button id="menu-button" class="menu-btn"
   on="tap:sidebar-right.toggle"
   class="ampstart-btn caps m2">
   <amp-img src="/assets/ic_menu_purple_24dp_1x.png"
     width="50"
     height="50"
-    alt="menu"></amp-img>
-</button>
+    alt="menu"></amp-img></button>
 <div id="target-element-right"></div>
 <div id="title-row">
   <p class="luckiest-guy-title">Lil'<br />Alphonse</p>
   <p class="luckiest-guy-sub">THE #1 Snorkeling Guide<br />
-    in San Pedro, Ambergris Caye, Belize</p>
+    San Pedro, Belize</p>
 </div>
 <div class="container">
   <div class="row">
@@ -75,54 +73,54 @@
         opportunities.</p>
     </div>
   </div>
-  <div class="row">
-    <div class="scrollToTopButton">
-        <amp-animation id="showAnim"
-          layout="nodisplay">
-          <script type="application/json">
-            {
-              "duration": "200ms",
-              "fill": "both",
-              "iterations": "1",
-              "direction": "alternate",
-              "animations": [{
-                "selector": "#scrollToTopButton",
-                "keyframes": [{
-                  "opacity": "1",
-                  "visibility": "visible"
-                }]
-              }]
-            }
-          </script>
-        </amp-animation>
-        <amp-animation id="hideAnim"
-          layout="nodisplay">
-          <script type="application/json">
-            {
-              "duration": "200ms",
-              "fill": "both",
-              "iterations": "1",
-              "direction": "alternate",
-              "animations": [{
-                "selector": "#scrollToTopButton",
-                "keyframes": [{
-                  "opacity": "0",
-                  "visibility": "hidden"
-                }]
-              }]
-            }
-          </script>
-        </amp-animation>
-        <div id="marker">
-          <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
-            layout="nodisplay">
-          </amp-position-observer>
-        </div>
-        <button id="scrollToTopButton"
-          on="tap:menu-button.scrollTo(duration=200)"
-          class="scrollToTop">⌃</button>
-      </div>
-      <p class="mvxgreen-footer">MVX GREEN</p>
+</div>
+<div class="footer">
+  <div class="scrollToTopButton">
+    <amp-animation id="showAnim"
+      layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": "200ms",
+          "fill": "both",
+          "iterations": "1",
+          "direction": "alternate",
+          "animations": [{
+            "selector": "#scrollToTopButton",
+            "keyframes": [{
+              "opacity": "1",
+              "visibility": "visible"
+            }]
+          }]
+        }
+      </script>
+    </amp-animation>
+    <amp-animation id="hideAnim"
+      layout="nodisplay">
+      <script type="application/json">
+        {
+          "duration": "200ms",
+          "fill": "both",
+          "iterations": "1",
+          "direction": "alternate",
+          "animations": [{
+            "selector": "#scrollToTopButton",
+            "keyframes": [{
+              "opacity": "0",
+              "visibility": "hidden"
+            }]
+          }]
+        }
+      </script>
+    </amp-animation>
+    <div id="marker">
+      <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start"
+        layout="nodisplay">
+      </amp-position-observer>
+    </div>
+    <button id="scrollToTopButton"
+      on="tap:menu-button.scrollTo(duration=200)"
+      class="scrollToTop">⌃</button>
   </div>
+  <p class="mvxgreen-footer">MVX GREEN</p>
 </div>
 {{end}}
