@@ -26,7 +26,7 @@ func Index(c echo.Context) error {
 }
 
 func About(c echo.Context) error {
-  return c.Render(http.StatusOK, "layout", &IndexData{Host: c.Request().Host, EscapedMessageVar: "{{message}}"})
+  return c.Render(http.StatusOK, "about_layout", &IndexData{Host: c.Request().Host, EscapedMessageVar: "{{message}}"})
 }
 
 func main() {
@@ -37,7 +37,7 @@ func main() {
 
 
   t := &Template{
-    templates: template.Must(template.ParseFiles("views/layout.html", "views/styles.html", "views/content.html")),
+    templates: template.Must(template.ParseGlob("views/*.html")),
   }
   e.Renderer = t
 
