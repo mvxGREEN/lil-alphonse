@@ -1,34 +1,33 @@
 {{ define "content" }}
-<amp-sidebar id="sidebar-right"
+<amp-sidebar id="sidebar-left"
   layout="nodisplay"
-  side="right">
+  side="left">
   <amp-img class="amp-close-image"
     src="/assets/ic_close_black_18dp_2x.png"
     width="20"
     height="20"
     alt="close sidebar"
-    on="tap:sidebar-right.close"
+    on="tap:sidebar-left.close"
     role="button"
     tabindex="0"></amp-img>
   <nav toolbar="(min-width: 784px)"
-    toolbar-target="target-element-right"
+    toolbar-target="target-element-left"
     layout="nodisplay">
   </nav>
   <ul>
     <li> Home</li>
-    <li> Nav item 2</li>
-    <li> Nav item 3</li>
-    <li> Nav item 4</li>
-    <li> Nav item 5</li>
+    <li> About</li>
+    <li> Media</li>
+    <li> Book a Tour</li>
   </ul></amp-sidebar>
 <button id="menu-button" class="menu-btn"
-  on="tap:sidebar-right.toggle"
+  on="tap:sidebar-left.toggle"
   class="ampstart-btn caps m2">
   <amp-img src="/assets/ic_menu_purple_24dp_1x.png"
     width="50"
     height="50"
     alt="menu"></amp-img></button>
-<div id="target-element-right"></div>
+<div id="target-element-left"></div>
 <div id="title-row">
   <p class="luckiest-guy-title">Lil'<br />Alphonse</p>
   <p class="luckiest-guy-sub">THE #1 Snorkeling Guide<br />
@@ -60,8 +59,7 @@
       <amp-youtube width="400"
         height="300"
         layout="responsive"
-        data-videoid="Q6MSyLVu-8g"
-        autoplay>
+        data-videoid="Q6MSyLVu-8g">
       </amp-youtube>
     </div>
     <div class="six columns">
