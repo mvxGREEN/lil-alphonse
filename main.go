@@ -25,6 +25,10 @@ func Index(c echo.Context) error {
 	return c.Render(http.StatusOK, "layout", &IndexData{Host: c.Request().Host, EscapedMessageVar: "{{message}}"})
 }
 
+func About(c echo.Context) error {
+  return c.Render(http.StatusOK, "layout", &IndexData{Host: c.Request().Host, EscapedMessageVar: "{{message}}"})
+}
+
 func main() {
   e := echo.New()
 
@@ -39,6 +43,7 @@ func main() {
 
 	e.Static("/", "public")
 	e.GET("/", Index)
+  e.GET("/about", About)
 
   e.Logger.Fatal(e.Start(":80"))
 }

@@ -1,0 +1,42 @@
+{{ define "about" }}
+<amp-sidebar id="sidebar-left"
+  layout="nodisplay"
+  side="left">
+  <amp-img class="amp-close-image"
+    src="/assets/ic_close_black_18dp_2x.png"
+    width="20"
+    height="20"
+    alt="close sidebar"
+    on="tap:sidebar-left.close"
+    role="button"
+    tabindex="0"></amp-img>
+  <nav toolbar="(min-width: 784px)"
+    toolbar-target="target-element-left"
+    layout="nodisplay">
+  </nav>
+  <ul>
+    <li> Home</li>
+    <li> About</li>
+    <li> Media</li>
+    <li> Book a Tour</li>
+  </ul></amp-sidebar>
+<button id="menu-button" class="menu-btn"
+  on="tap:sidebar-left.toggle"
+  class="ampstart-btn caps m2">
+  <amp-img src="/assets/ic_menu_purple_24dp_1x.png"
+    width="50"
+    height="50"
+    alt="menu"></amp-img></button>
+<div id="target-element-left"></div>
+<div id="title-row">
+  <p class="luckiest-guy-title">About Lil' Alphonse</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="twelve columns">
+      <p class="luckiest-guy-body">Alphonse Granier (also known as Lil' Alphonse)
+      has been swimming with the sea life since childhood.</p>
+    </div>
+  </div>
+</div>
+{{end}}
